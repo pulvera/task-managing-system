@@ -42,9 +42,11 @@
 <html>
     <head>
         <title>Task Manager</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>style.css" />
     </head>
     
     <body>
+    <div class="wrapper">
         <p>
             <a href="<?php echo SITEURL; ?>">Home</a>
         </p>
@@ -96,6 +98,7 @@
                 </tr>
             </table>
         </form>
+    </div>
     </body>
 </html>
 

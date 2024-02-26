@@ -1,0 +1,49 @@
+/* 
+    Task Managing System
+    Anne Rachel S. Petalcorin and Chelsy Kate R. Pulvera
+*/ 
+
+*{
+    margin: 10;
+    padding: a0;
+    font-family: verdana;
+}
+
+.wrapper{
+    border: 5px solid rgb(55, 74, 169);
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+h1{
+    color:rgb(53, 52, 58);
+    margin-bottom: 2%;
+}
+
+.btn-primary{
+    background-color: rgb(50, 113, 145);
+    padding: 5px;
+    font-weight: bold;
+    text-decoration:none;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: rgb(28, 62, 78);
+}
+
+.tbl-full{
+    width: 100%;
+}
+
+table tr th{
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding: 1%;
+    padding-top: 3%;
+}
+
+table tr td{
+    padding: 1%;
+}

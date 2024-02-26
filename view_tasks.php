@@ -6,22 +6,22 @@
     {
         $task_id = $_GET['id'];
 
-        // Connect to the database
+        // connect to the database
         $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_connect_error());
 
-        // Select database
+        // select database
         $db_select = mysqli_select_db($conn, DB_NAME) or die($mysqli_connect_error());
 
-        // Create SQL query to get data for the specific task
+        // create sql query
         $sql = "SELECT * FROM tasks WHERE id = $task_id";
 
-        // Execute query
+        // execute query
         $res = mysqli_query($conn, $sql);
 
-        // Check whether the query executed or not 
+        // check whether the query is executed or not 
         if($res==true)
         {
-            // Fetch the task data
+            // fetch the task data
             $row = mysqli_fetch_assoc($res);
             $id = $row['id'];
             $title = $row['title'];
@@ -31,7 +31,7 @@
         }
         else
         {
-            // Task not found
+            // task not found
             $_SESSION['view_task_fail'] = "Task not found.";
             header('location:'.SITEURL);
             exit();
@@ -39,7 +39,7 @@
     }
     else
     {
-        // Redirect to home if task id is not provided
+        // redirect to homepage
         header('location:'.SITEURL);
         exit();
     }
@@ -48,8 +48,10 @@
 <html>
     <head>
         <title>View Task</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>style.css" />
     </head>
     <body>
+    <div class="wrapper">
         <h1>View Task</h1>
 
         <p>
@@ -71,5 +73,6 @@
         </div>
 
         <a href="<?php echo SITEURL; ?>index.php">Back to Tasks</a>
+    </div>
     </body>
 </html>

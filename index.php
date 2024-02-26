@@ -6,8 +6,11 @@
 <html>
     <head>
         <title>Task Management System</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>style.css" />
     </head>
     <body>
+
+    <div class="wrapper">
         <h1>Task Manager</h1>
         <p>
             <?php
@@ -37,8 +40,8 @@
         </p>
 
         <div class="all-tasks">
-            <a href="<?php SITEURL: ?>create_task.php">Create Task</a>
-            <table>
+            <a class="btn-primary" href="<?php SITEURL: ?>create_task.php">Create Task</a>
+            <table class="tbl-full">
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
@@ -112,6 +115,7 @@
                     }
                 ?>
             </table>
+        </div>
         </div>
     </body>
 </html>

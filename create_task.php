@@ -5,8 +5,10 @@
 <html>
     <head>
         <title>Task Management System</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>style.css" />
     </head>
     <body>
+    <div class="wrapper">
         <h1>Task Manager</h1>
         <a href="<?php echo SITEURL ?>">Home</a>
 
@@ -64,6 +66,7 @@
                     <td><input type="submit" name="submit" value="SAVE" /></td>
             </table>
         </form>
+    </div>
     </body>
 
 </html>
